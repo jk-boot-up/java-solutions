@@ -1,6 +1,10 @@
 # java-solutions
 
 Java solutions to problems
+
+## Source code
+
+ * https://github.com/jk-boot-up/java-solutions.git
  
 ## How to generate this maven project
 
