@@ -4,7 +4,8 @@ package com.jk.explore.java.basics.hash.v1;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Employee {
+// extends Object is redundant
+public class Employee extends Object {
 
     private static Logger logger = LoggerFactory.getLogger(Employee.class);
 
@@ -12,13 +13,19 @@ public class Employee {
 
     public Employee(int id) {
         this.id = id;
-        logger.info("Created Employee instance with id: "+id);
+        logger.info("instance created with id: "+id);
     }
 
     @Override
     public int hashCode() {
-        logger.info("Called hash code method from Employee class. Hash code is: "+ super.hashCode());
+        logger.info("hashCode called. hash code is: "+ super.hashCode());
         return super.hashCode();
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        //return (this == obj);
+        logger.info("equals called. results is: "+ super.equals(obj));
+        return super.equals(obj);
+    }
 }
