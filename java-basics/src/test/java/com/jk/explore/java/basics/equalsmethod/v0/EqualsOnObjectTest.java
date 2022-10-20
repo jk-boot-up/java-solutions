@@ -1,4 +1,4 @@
-package com.jk.explore.java.basics.equalsmethod;
+package com.jk.explore.java.basics.equalsmethod.v0;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -12,11 +12,20 @@ public class EqualsOnObjectTest {
     Logger logger = LoggerFactory.getLogger(EqualsOnObjectTest.class);
 
     @Test
-    public void equalsTest() {
+    public void equalsTest1() {
         Object x = new Object();
         Object y = new Object();
         assertFalse(x.equals(y));
         out.println("x.equals(y) results is: " +  x.equals(y));
         logger.info("x.equals(y) results is: "+ x.equals(y));
+    }
+
+    @Test
+    public void equalsTest2() {
+        Object x = new Object();
+        Object y = new Object();
+        assertFalse(x == y);
+        out.println("x == y results is: " +  (x == y));
+        logger.info("x == y results is: "+ (x == y));
     }
 }
